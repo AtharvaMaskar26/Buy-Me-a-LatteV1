@@ -1,0 +1,17 @@
+    <>
+      <WagmiConfig config={wagmiConfig}>
+        <SuperfluidWidget
+          productDetails={productDetails}
+          paymentDetails={paymentDetails}
+          tokenList={superTokenList}
+          type="drawer"
+          walletManager={walletManager}
+          eventListeners={eventListeners}
+        >
+          {({ openModal }) => (
+            <button onClick={() => openModal()}>Drawer</button>
+          )}
+        </SuperfluidWidget>
+      </WagmiConfig>
+      <Web3Modal projectId={projectId} ethereumClient={ethereumClient} />
+    </>
